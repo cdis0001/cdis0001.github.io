@@ -14,7 +14,7 @@
       "lookup": "properties.SUBUNIT",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/cdis0001/vega_lite/main/2020.csv"
+          "url": "https://raw.githubusercontent.com/cdis0001/vega_lite_FIT3179/main/2020.csv"
         },
         "key": "Country name",
         "fields": ["Score"]
