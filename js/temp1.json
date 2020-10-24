@@ -1,0 +1,89 @@
+ {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 600,
+  "title": "Life expectancy vs Happiness Score",
+  "data": {
+    "url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/2020.csv"
+  },
+
+  "params": [
+    {
+      "name": "Region",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Central and Eastern Europe",
+          "Commonwealth of Independent States",
+          "East Asia",
+          "Latin America and Caribbean",
+          "Middle East and North Africa",
+          "North America and ANZ",
+          "South Asia",
+          "Southeast Asia",
+          "Sub-Saharan Africa",
+          "Western Europe"  
+        ],
+        "labels": [
+          "Show All",
+          "Central and Eastern Europe",
+          "Commonwealth of Independent States",
+          "East Asia",
+          "Latin America and Caribbean",
+          "Middle East and North Africa",
+          "North America and ANZ",
+          "South Asia",
+          "Southeast Asia",
+          "Sub-Saharan Africa",
+          "Western Europe"  
+        ],
+        "name": "Regions"
+      }
+    }
+  ],
+
+"transform": [
+  {"filter": "Region == null ||  Region == datum.Regional_indicator"}
+],
+
+
+  "selection": {
+    "region_selection":{
+      "type": "multi",
+      "fields": ["Regional indicator"],
+      "bind":"legend"
+    }
+  },
+
+  "mark": "circle",
+  "encoding": {
+    "x":{
+      "field":"Healthy life expectancy",
+      "type":"quantitative",
+      "title":"Life Expectancy",
+      "scale": {"domain": [40,85]}
+    },
+    "y":{
+      "field": "Score",
+      "type": "quantitative",
+      "title": "Happiness Score",
+      "scale": {"domain": [2,8]}
+    },
+
+    "color":{
+      "field": "Regional indicator",
+      "type":"nominal"
+    },
+
+    "opacity":{
+      "condition": {"selection": "region_selection", "value": 0.6},
+      "value":0.2
+    },
+
+    "size":{
+      "field": "Freedom to make life choices",
+      "type": "quantitative"
+    }
+  }
+}
