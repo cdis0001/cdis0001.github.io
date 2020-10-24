@@ -67,8 +67,15 @@
         "fontStyle": "italic"
       },
       "encoding": {
-        "text": {"field": "Country name", "type": "nominal"}
-
+        "text": {"field": "Country name", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country name'] == 'Finland' || datum['Country name'] == 'Australia' || datum['Country name'] == 'United States' || datum['Country name'] == 'Ivory Coast' ",
+            "value": 1
+          },
+          "value": 0
+        }
 
     }
     }
