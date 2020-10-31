@@ -2,17 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 800,
   "height": 600,
-  "title": "Life expectancy vs Happiness Score",
   "data": {
-    "url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/2020.csv"
+    "url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/file_name2.csv"
   },
   "encoding": {
     "x": {
       "field": "Healthy life expectancy",
       "type": "quantitative",
-      "title": "Life Expectancy",
-      "axis": {"tickCount": 7},
-      "scale": {"domain": [40, 85]}
+      "title": "Life Expectancy Index",
+      "axis": {"tickCount": 7}
     },
     "y": {
       "field": "Score",
@@ -27,30 +25,54 @@
       "selection": {
         "region_selection": {
           "type": "multi",
-          "fields": ["Regional indicator"],
+          "fields": ["Region"],
           "bind": "legend"
         }
       },
       "mark": "circle",
       "encoding": {
-        "color": {"field": "Regional indicator", "type": "nominal"},
+        "color": {"field": "Region", "type": "nominal"},
         "opacity": {
           "condition": {"selection": "region_selection", "value": 0.6},
           "value": 0.2
         },
+        "color": {
+          "field": "Region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "East Asia & Pacific",
+              "Europe & Central Asia",
+              "South Asia",
+              "Latin America & Caribbean",
+              "North America",
+              "Middle East & North Africa",
+              "Sub-Saharan Africa"
+            ],
+            "range": [
+              "#1a50e4",
+              "#ff8300",
+              "#ffe600",
+              "#fa0015",
+              "#17bd1f",
+              "#16bdde",
+              "#c82bfc"
+            ]
+          }
+        },
         "size": {
-          "field": "Freedom to make life choices",
+          "field": "Social support",
           "type": "quantitative",
           "scale":{"type": "threshold",
-                    "domain": [0, 0.2, 0.4, 0.6, 0.8],
+                    "domain": [0, 0.4, 0.8, 1.2, 1.6],
                       "range": [25, 75, 125, 250, 500, 1000]
 
 }
         },
         "tooltip": [
-          {"field": "Country name", "type": "nominal"},
+          {"field": "Country", "type": "nominal"},
           {"field": "Score", "type": "quantitative"},
-          {"field": "Score", "type": "quantitative"}
+          {"field": "Life Expectancy", "type": "quantitative"}
         ]
       }
     },
@@ -64,11 +86,11 @@
         "fontStyle": "italic"
       },
       "encoding": {
-        "text": {"field": "Country name", "type": "nominal"},
+        "text": {"field": "Country", "type": "nominal"},
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country name'] == 'Finland' || datum['Country name'] == 'Australia' || datum['Country name'] == 'United States' || datum['Country name'] == 'Ivory Coast' ",
+            "test": "datum['Country'] == 'Finland' || datum['Country'] == 'Australia' || datum['Country'] == 'United States' || datum['Country'] == 'Ivory Coast' ",
             "value": 1
           },
           "value": 0
