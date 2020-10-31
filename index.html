@@ -122,8 +122,11 @@
    
 <script type="text/javascript">
   var specVis1 = "js/map.json";
-  var specVis2= "js/temp1.json";
-
+  var specVis2= "js/temp.json";
+  var specVis3 = "js/temp1.json";
+  var specVis4= "js/pie_chart.json";
+  var specVis5 = "js/line.json";
+          
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -132,13 +135,18 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+          
 </script>
 </body>
 </html>
