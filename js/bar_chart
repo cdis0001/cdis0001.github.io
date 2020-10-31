@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "height": 300,
+  "data": { "url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/GDP_Region.csv"},
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "Region", "type": "nominal",
+      "sort": ["East Asia & Pacific",
+              "North America",
+              "Europe & Central Asia",
+              "Latin America & Caribbean",
+              "Middle East & North Africa",
+              "South Asia",
+              "Sub-Saharan Africa"]},
+    "x": {
+      "field": "Millions of USD",
+      "type": "quantitative"
+      
+    },
+    "color": {"field": "Region", "type": "nominal","legend":null,
+    "scale": {
+     "domain": [
+              "East Asia & Pacific",
+              "Europe & Central Asia",
+              "South Asia",
+              "Latin America & Caribbean",
+              "North America",
+              "Middle East & North Africa",
+              "Sub-Saharan Africa"
+            ],
+            "range": [
+              "#1a50e4",
+              "#ff8300",
+              "#ffe600",
+              "#fa0015",
+              "#17bd1f",
+              "#16bdde",
+              "#c82bfc"
+            ]}
+            
+    },
+      "tooltip": [
+          {"field": "Region", "type": "nominal"},
+          {"field": "Millions of USD", "type": "nominal"}]
+  }
+
+}
