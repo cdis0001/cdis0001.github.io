@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Multiple Visualisations | An Example</title>
@@ -118,41 +119,26 @@
   
 
   </div> <!-- end page -->
-
+   
 <script type="text/javascript">
-  
-  var vis1 = "js/map.json";
-  
-  vegaEmbed('#choropleth_map', vis1).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var vis2 = "js/temp1.json";
-  
-  vegaEmbed('#bubble_plot', vis2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  
-  var vis3 = "js/pie_chart.json";
-  
-  vegaEmbed('#pie_chart', vis3).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var vis4 = "js/line.json";
-  
-  vegaEmbed('#line_graph', vis4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var vis5 = "js/bubble_chart2.json";
-  
-  vegaEmbed('#bubble_chart2', vis5).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-</script>
+  var specVis1 = "js/map.json";
+  var specVis2= "js/temp1.json";
 
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
 </body>
 </html>
