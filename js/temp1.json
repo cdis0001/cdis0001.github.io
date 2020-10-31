@@ -7,17 +7,16 @@
   },
   "encoding": {
     "x": {
-      "field": "Healthy life expectancy",
+      "field": "Freedom to make life choices",
       "type": "quantitative",
-      "title": "Life Expectancy Index",
+      "title": "Freedom to make life choices",
       "axis": {"tickCount": 7}
     },
     "y": {
-      "field": "Score",
+      "field": "PeaceIndex",
       "type": "quantitative",
-      "title": "Happiness Score",
-      "axis": {"tickCount": 6},
-      "scale": {"domain": [2, 8]}
+      "title": "Peace Index",
+      "axis": {"tickCount": 6}
     }
   },
   "layer": [
@@ -25,7 +24,7 @@
       "selection": {
         "region_selection": {
           "type": "multi",
-          "fields": ["Region"],
+          "fields": ["Regional indicator"],
           "bind": "legend"
         }
       },
@@ -36,7 +35,7 @@
           "condition": {"selection": "region_selection", "value": 0.6},
           "value": 0.2
         },
-        "color": {
+         "color": {
           "field": "Region",
           "type": "nominal",
           "scale": {
@@ -61,29 +60,27 @@
           }
         },
         "size": {
-          "field": "Social support",
-          "title": "Social Support Index",
+          "field": "Perceptions of corruption",
           "type": "quantitative",
           "scale":{"type": "threshold",
-                    "domain": [0, 0.4, 0.8, 1.2, 1.6],
+                    "domain": [0, 0.1, 0.2, 0.3, 0.4],
                       "range": [25, 75, 125, 250, 500, 1000]
 
 }
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "Score", "type": "quantitative", "format": ".2f",
-          "title": "Happiness Score"},
-          {"field": "Healthy life expectancy", "type": "quantitative", "title": "Life Expectancy Index","format": ".2f"},
-          {"field": "Social support", "type": "quantitative", "title": "Social Support Index","format": ".2f"}
+          {"field": "PeaceIndex", "type": "quantitative", "format": ".2f",
+          "title": "Unrest Index"},
+          {"field": "Freedom to make life choices", "type": "quantitative", "title": "Freedom Index","format": ".2f"}
         ]
       }
     },
     {
       "mark": {
         "type": "text",
-        "align": "right",
-        "baseline": "line-top",
+        "align": "left",
+        "baseline": "middle",
         "dx": 3,
         "fontSize": 11.5,
         "fontStyle": "italic"
@@ -93,7 +90,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Finland' ",
+            "test": "datum['Country'] == 'Iceland'",
             "value": 1
           },
           "value": 0
