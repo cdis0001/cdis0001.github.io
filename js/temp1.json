@@ -15,7 +15,7 @@
     "y": {
       "field": "PeaceIndex",
       "type": "quantitative",
-      "title": "Peace Index",
+      "title": "Unrest Index",
       "axis": {"tickCount": 6}
     }
   },
