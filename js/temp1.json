@@ -73,7 +73,7 @@
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Score", "type": "quantitative", "format": ".2f",
-          "title": "Happiness Index"},
+          "title": "Happiness Score"},
           {"field": "Healthy life expectancy", "type": "quantitative", "title": "Life Expectancy Index","format": ".2f"},
           {"field": "Social support", "type": "quantitative", "title": "Social Support Index","format": ".2f"}
         ]
