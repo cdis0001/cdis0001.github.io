@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Happiness Score 2019",
-  "width": 800,
-  "height": 600,
+  "width": "container",
+  "height": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/mendivez/fit3179-vegalite/main/worldmap.json",
     "format": {"type": "topojson", 
