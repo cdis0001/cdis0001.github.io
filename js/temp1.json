@@ -62,6 +62,7 @@
         },
         "size": {
           "field": "Social support",
+          "title": "Social Support Index",
           "type": "quantitative",
           "scale":{"type": "threshold",
                     "domain": [0, 0.4, 0.8, 1.2, 1.6],
@@ -73,7 +74,8 @@
           {"field": "Country", "type": "nominal"},
           {"field": "Score", "type": "quantitative", "format": ".2f",
           "title": "Happiness Index"},
-          {"field": "Healthy life expectancy", "type": "quantitative", "title": "Life Expectancy Index","format": ".2f"}
+          {"field": "Healthy life expectancy", "type": "quantitative", "title": "Life Expectancy Index","format": ".2f"},
+          {"field": "Social support", "type": "quantitative", "title": "Social Support Index","format": ".2f"}
         ]
       }
     },
