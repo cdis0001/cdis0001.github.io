@@ -83,7 +83,7 @@
       "mark": {
         "type": "text",
         "align": "right",
-        "baseline": "middle",
+        "baseline": "line-top",
         "dx": 3,
         "fontSize": 11.5,
         "fontStyle": "italic"
@@ -93,7 +93,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Australia' ",
+            "test": "datum['Country'] == 'Finland' ",
             "value": 1
           },
           "value": 0
