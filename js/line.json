@@ -1,33 +1,50 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/tertiary.csv"
-  },
-  "repeat": {
-    "layer": ["Sub-Saharan Africa",
-              "Middle East & North Africa",
-              "Europe & Central Asia",
-              "East Asia & Pacific",
-              "South Asia",
-              "North America",
-              "Latin America & Caribbean"]
-  },
-  "spec": {
-    "mark": "line",
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "quantitative"
+  "width": 800,
+  "height": 600,
+  "data": {"url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/t1.csv"},
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": "Year"},
+    "y": {"field": "Enrolments", "type": "quantitative", "title": "Number of Enrolments"},
+    "color": {
+      "condition": {
+        "selection": "hover",
+        "field": "Region",
+        "type": "nominal",
+        "legend": null
       },
-      "y": {
-        "field": {"repeat": "layer"},
-        "type": "quantitative",
-        "title": "Number of Enrolments"
+      "value": "grey"
+    },
+    "opacity": {"condition": {"selection": "hover", "value": 1}, "value": 0.2}
+  },
+  "layer": [
+    {
+      "description": "transparent layer to make it easier to trigger selection",
+      "selection": {
+        "hover": {
+          "type": "single",
+          "on": "mouseover",
+          "empty": "all",
+          "fields": ["Region"],
+          "init": {"Region": "East Asia & Pacific"}
+        }
       },
-      "color": {
-        "datum": {"repeat": "layer"},
-        "type": "nominal"
-      }
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"},
+    {
+      "encoding": {
+        "x": {"aggregate": "max", "field": "Year"},
+        "y": {"aggregate": {"argmax": "Year"}, "field": "Enrolments"}
+      },
+      "layer": [
+        {"mark": {"type": "circle"}},
+        {
+          "mark": {"type": "text", "align": "left", "dx": 4},
+          "encoding": {"text": {"field": "Region", "type": "nominal"}}
+        }
+      ]
     }
-  }
+  ],
+  "config": {"view": {"stroke": null}}
 }
