@@ -71,8 +71,9 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
-          {"field": "Score", "type": "quantitative"},
-          {"field": "Life Expectancy", "type": "quantitative"}
+          {"field": "Score", "type": "quantitative", "format": ".2f",
+          "title": "Happiness Index"},
+          {"field": "Healthy life expectancy", "type": "quantitative", "title": "Life Expectancy Index","format": ".2f"}
         ]
       }
     },
@@ -90,7 +91,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Finland' || datum['Country'] == 'Australia' || datum['Country'] == 'United States' || datum['Country'] == 'Ivory Coast' ",
+            "test": "datum['Country'] == 'Australia' ",
             "value": 1
           },
           "value": 0
