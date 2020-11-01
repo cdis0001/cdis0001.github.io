@@ -93,7 +93,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Iceland'",
+            "test": "datum['Country'] == 'Iceland' || datum['Country'] == 'Syria'",
             "value": 1
           },
           "value": 0
