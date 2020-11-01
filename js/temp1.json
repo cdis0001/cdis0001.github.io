@@ -70,6 +70,8 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
+          {"field": "Score", "type": "quantitative", "format": ".2f",
+          "title": "Happiness Score"},
           {"field": "PeaceIndex", "type": "quantitative", "format": ".2f",
           "title": "Unrest Index"},
           {"field": "Freedom to make life choices", "type": "quantitative", "title": "Freedom Index","format": ".2f"}
