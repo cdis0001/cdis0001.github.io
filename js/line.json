@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Number of University Enrolments 2019"
   "width": "container",
   "height": 450,
   "data": {"url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/t1.csv"},
