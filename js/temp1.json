@@ -24,7 +24,7 @@
       "selection": {
         "region_selection": {
           "type": "multi",
-          "fields": ["Regional indicator"],
+          "fields": ["Region"],
           "bind": "legend"
         }
       },
