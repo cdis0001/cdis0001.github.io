@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "How important is health to ones happiness?",
   "width": "container",
   "height": 450,
   "data": {
@@ -93,7 +94,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Finland' ",
+            "test": "datum['Country'] == 'Finland' || datum['Country'] == 'South Sudan'  ",
             "value": 1
           },
           "value": 0
