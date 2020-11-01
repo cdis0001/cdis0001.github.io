@@ -31,7 +31,7 @@
     ],
     "mark":"geoshape",
     "encoding": {
-      "color": {"field": "Score", "type": "quantitative"},
+      "color": {"field": "Score", "type": "quantitative","scale": {"scheme": "greens"}},
       
       "tooltip": [
       {"field": "properties.admin", "type": "nominal", "title": "Country"},
