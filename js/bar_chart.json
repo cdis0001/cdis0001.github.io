@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Gross Domestic Product (GDP) Across World Regions"
+  "title": "Gross Domestic Product (GDP) Across World Regions",
   "width": "container",
   "height": 300,
   "data": { "url": "https://raw.githubusercontent.com/cdis0001/cdis0001.github.io/main/data/GDP_Region.csv"},
