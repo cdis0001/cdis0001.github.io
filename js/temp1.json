@@ -82,7 +82,7 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "middle",
+        "baseline": "line-top",
         "dx": 3,
         "fontSize": 11.5,
         "fontStyle": "italic"
