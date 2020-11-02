@@ -11,6 +11,25 @@
       "condition": {
         "selection": "hover",
         "field": "Region",
+        "scale": {
+     "domain": [
+              "East Asia & Pacific",
+              "Europe & Central Asia",
+              "South Asia",
+              "Latin America & Caribbean",
+              "North America",
+              "Middle East & North Africa",
+              "Sub-Saharan Africa"
+            ],
+            "range": [
+              "#E69F00",
+              "#56B4E9",
+              "#009E73",
+              "#F0E442",
+              "#0072B2",
+              "#D55E00",
+              "#CC79A7"
+            ]},
         "type": "nominal",
         "legend": null
       },
