@@ -40,7 +40,7 @@
           "field": "Region",
           "type": "nominal",
           "scale": {
-            "domain": [
+     "domain": [
               "East Asia & Pacific",
               "Europe & Central Asia",
               "South Asia",
@@ -50,15 +50,14 @@
               "Sub-Saharan Africa"
             ],
             "range": [
-              "#1a50e4",
-              "#ff8300",
-              "#ffe600",
-              "#fa0015",
-              "#17bd1f",
-              "#16bdde",
-              "#c82bfc"
-            ]
-          }
+              "#E69F00",
+              "#56B4E9",
+              "#009E73",
+              "#F0E442",
+              "#0072B2",
+              "#D55E00",
+              "#CC79A7"
+            ]}
         },
         "size": {
           "field": "Perceptions of corruption",
