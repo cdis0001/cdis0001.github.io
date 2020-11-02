@@ -83,7 +83,7 @@
         "type": "text",
         "align": "left",
         "baseline": "line-top",
-        "dx": 3,
+        "dx": 5,
         "fontSize": 11.5,
         "fontStyle": "italic"
       },
